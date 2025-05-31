@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>X2H 測試</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module">
+        import X2HRender from '../src/x2h.js';
+
+        fetch("example.xml")
+            .then(r => r.text())
+            .then(xmlString => {
+                const renderer = new X2HRender(xmlString);
+                renderer.render();
+            })
+            .catch(console.error);
+    </script>
+</body>
+</html>

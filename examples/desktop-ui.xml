@@ -1,0 +1,85 @@
+<root>
+    <Web-Title>桌面應用示例</Web-Title>
+    
+    <frame id="mainWindow">
+        <geometry>
+            <x>0</x>
+            <y>0</y>
+            <width>800</width>
+            <height>600</height>
+        </geometry>
+        <padding>20</padding>
+
+        <frame id="toolbar">
+            <geometry>
+                <x>0</x>
+                <y>0</y>
+                <width>800</width>
+                <height>50</height>
+            </geometry>
+            <background-color>#e0e0e0</background-color>
+            <padding>10</padding>
+
+            <button id="newButton">
+                <text>新建</text>
+                <geometry>
+                    <x>10</x>
+                    <y>5</y>
+                    <width>80</width>
+                    <height>30</height>
+                </geometry>
+                <tooltip>創建新文件</tooltip>
+                <on-click>alert('新建文件')</on-click>
+            </button>
+        </frame>
+
+        <frame id="sidebar">
+            <geometry>
+                <x>0</x>
+                <y>50</y>
+                <width>200</width>
+                <height>550</height>
+            </geometry>
+            <background-color>#fff</background-color>
+            <border-right>1px solid #ccc</border-right>
+            <padding>10</padding>
+
+            <checkbox id="option1">
+                <text>啟用自動保存</text>
+                <geometry>
+                    <x>10</x>
+                    <y>10</y>
+                </geometry>
+                <checked>true</checked>
+                <on-change>console.log('自動保存：' + this.checked)</on-change>
+            </checkbox>
+        </frame>
+
+        <frame id="content">
+            <geometry>
+                <x>200</x>
+                <y>50</y>
+                <width>600</width>
+                <height>550</height>
+            </geometry>
+            <background-color>#fff</background-color>
+            <padding>20</padding>
+
+            
+        </frame>
+    </frame>
+
+    <image id="preview">
+        <geometry>
+                <x>900</x>
+                <y>300</y>
+                <width>200</width>
+        <height>200</height>
+        </geometry>
+        <src>test.png</src>
+        <alt>預覽圖</alt>
+        <fit>cover</fit>
+        <border>1px solid #ddd</border>
+        <border-radius>4</border-radius>
+    </image>
+</root>
